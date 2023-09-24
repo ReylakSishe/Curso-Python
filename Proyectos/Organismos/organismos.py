@@ -10,11 +10,12 @@ contraseñas = ["CHIPI1971","EURASIA","JAJAJANT","ECHENME"]
 
 intento = 0
 intentoHecho = intento + 1
+intento = intentoHecho
 
 #funciones
 
-def sumarIntento():
-    intento = intentoHecho
+def terminar():
+    print("sin intentos")
 
 
 def usuarioLogueado():
@@ -25,19 +26,15 @@ def usuarioLogueado():
         
     else:
         print("logon incorrecto")
-
+        
         if intento > 3:
             print("ya no podes ingresar")
-
+            terminar()
 
         else:
             print ("intente de nuevo por favor")
             usuarioLogueado()
-            sumarIntento()
-            
-            
-
-
+            intento()
 
 def rolAsignado():
     rolIngresado = input("ingrese su rol")
@@ -50,12 +47,13 @@ def rolAsignado():
         
         if intento > 3:
             print("ya no podes ingresar")
+            terminar()
 
         else:
             print ("intente de nuevo por favor")
             usuarioLogueado()
-            sumarIntento()
-          
+            intento()
+            
 
 def contraseñaPuesta():
     contraseñaIngresada = input("ingrese su contraseña")
@@ -67,11 +65,12 @@ def contraseñaPuesta():
 
         if intento > 3:
             print("ya no podes ingresar")
+            terminar()
 
         else:
             print("intente de nuevo por favor")
             usuarioLogueado()
-            sumarIntento()
+            intento()
 
 
 usuarioLogueado()

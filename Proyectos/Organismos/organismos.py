@@ -53,6 +53,7 @@ def contraseñaPuesta():
         if contraseñaIngresada in contraseñas:
             print("contraseña correcta")
             print("bienvenido de vuelta")
+            break
 
         else:
             print("contraseña incorrecta")

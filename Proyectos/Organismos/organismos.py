@@ -31,6 +31,8 @@ def usuarioLogueado():
             continue
     if intento == 3:
         terminar()
+    else:
+        usuarioLogueado()
 
 
 def rolAsignado():
@@ -48,6 +50,8 @@ def rolAsignado():
             continue
     if intento == 3:
         terminar()
+    else:
+        usuarioLogueado()
 
 
 def contraseñaPuesta():

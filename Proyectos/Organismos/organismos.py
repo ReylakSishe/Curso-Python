@@ -23,10 +23,12 @@ def usuarioLogueado():
         if logonIngresado in logones:
             print("logon correcto")
             rolAsignado()
+            break
 
         else:
             print("logon incorrecto")
             intento += 1
+            continue
     if intento == 3:
         terminar()
 
@@ -38,10 +40,12 @@ def rolAsignado():
         if rolIngresado in roles:
             print("rol correcto")
             contraseñaPuesta()
+            break
 
         else:
             print("rol incorrecto")
             intento += 1
+            continue
     if intento == 3:
         terminar()
 
@@ -58,6 +62,7 @@ def contraseñaPuesta():
         else:
             print("contraseña incorrecta")
             intento += 1
+            continue
     if intento == 3:
         terminar()
 

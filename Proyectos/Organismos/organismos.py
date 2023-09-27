@@ -27,7 +27,7 @@ def usuarioLogueado():
         else:
             print("logon incorrecto")
             intento += 1
-    while intento == 3:
+    if intento == 3:
         terminar()
 
 
@@ -42,9 +42,8 @@ def rolAsignado():
         else:
             print("rol incorrecto")
             intento += 1
-    while intento == 3:
+    if intento == 3:
         terminar()
-        break
 
 
 def contraseñaPuesta():
@@ -59,9 +58,8 @@ def contraseñaPuesta():
         else:
             print("contraseña incorrecta")
             intento += 1
-    while intento == 3:
+    if intento == 3:
         terminar()
-        break
 
 
 usuarioLogueado()

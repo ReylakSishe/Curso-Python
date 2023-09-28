@@ -1,8 +1,11 @@
 # listas
 
-logones = ["B959263", "C569853", "T698952", "Z698563"]
-
-roles = ["superior", "adjunto", "temporario", "tercerizado"]
+logones_roles = {
+    "B959263": "superior",
+    "C569853": "adjunto",
+    "T698952": "temporario",
+    "Z698563": "tercerizado",
+}
 
 contraseñas = ["CHIPI1971", "EURASIA", "JAJAJANT", "ECHENME"]
 
@@ -20,9 +23,9 @@ def usuarioLogueado():
     intento = 0
     while intento < 3:
         logonIngresado = input("ingrese su logon")
-        if logonIngresado in logones:
+        if logonIngresado in logones_roles:
             print("logon correcto")
-            rolAsignado()
+            rolAsignado(logonIngresado)
             break
 
         else:
@@ -33,11 +36,11 @@ def usuarioLogueado():
         terminar()
 
 
-def rolAsignado():
+def rolAsignado(logon):
     intento = 0
     while intento < 3:
         rolIngresado = input("ingrese su rol")
-        if rolIngresado in roles:
+        if rolIngresado == logones_roles[logon]:
             print("rol correcto")
             contraseñaPuesta()
             break

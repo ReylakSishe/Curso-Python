@@ -27,7 +27,7 @@ def terminar():
 def usuarioLogueado():
     intento = 0
     while intento < 3:
-        logonIngresado = input("ingrese su logon")
+        logonIngresado = input("ingrese su logon ")
         if logonIngresado in logones_roles:
             print("logon correcto")
             rolAsignado(logonIngresado)
@@ -44,7 +44,7 @@ def usuarioLogueado():
 def rolAsignado(logon):
     intento = 0
     while intento < 3:
-        rolIngresado = input("ingrese su rol")
+        rolIngresado = input("ingrese su rol ")
         if rolIngresado == logones_roles[logon]:
             print("rol correcto")
             contraseñaPuesta(rolIngresado)
@@ -61,7 +61,7 @@ def rolAsignado(logon):
 def contraseñaPuesta(rol):
     intento = 0
     while intento < 3:
-        contraseñaIngresada = input("ingrese su contraseña")
+        contraseñaIngresada = input("ingrese su contraseña ")
         if contraseñaIngresada in roles_contraseñas[rol]:
             print("contraseña correcta")
             print("bienvenido de vuelta")

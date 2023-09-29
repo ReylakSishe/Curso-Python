@@ -7,7 +7,12 @@ logones_roles = {
     "Z698563": "tercerizado",
 }
 
-contraseñas = ["CHIPI1971", "EURASIA", "JAJAJANT", "ECHENME"]
+roles_contraseñas = {
+    "superior": "CHIPI1971",
+    "adjunto": "EURASIA",
+    "temorario": "JAJAJANT",
+    "tercerizado": "ECHENME",
+}
 
 # intentos
 
@@ -42,7 +47,7 @@ def rolAsignado(logon):
         rolIngresado = input("ingrese su rol")
         if rolIngresado == logones_roles[logon]:
             print("rol correcto")
-            contraseñaPuesta()
+            contraseñaPuesta(rolIngresado)
             break
 
         else:
@@ -53,11 +58,11 @@ def rolAsignado(logon):
         terminar()
 
 
-def contraseñaPuesta():
+def contraseñaPuesta(rol):
     intento = 0
     while intento < 3:
         contraseñaIngresada = input("ingrese su contraseña")
-        if contraseñaIngresada in contraseñas:
+        if contraseñaIngresada in roles_contraseñas[rol]:
             print("contraseña correcta")
             print("bienvenido de vuelta")
             break

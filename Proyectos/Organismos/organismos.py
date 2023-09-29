@@ -10,7 +10,7 @@ logones_roles = {
 roles_contraseñas = {
     "superior": "CHIPI1971",
     "adjunto": "EURASIA",
-    "temorario": "JAJAJANT",
+    "temporario": "JAJAJANT",
     "tercerizado": "ECHENME",
 }
 

@@ -85,13 +85,13 @@ def contraseñaPuesta(rol):
 
 def actosDisponibles(rol):
     print("usted tiene disponibles los siguientes tipos de actos:")
-    if rol := "superior":
+    if rol == "superior":
         print("1, 3 y 4")
-    if rol := "adjunto":
+    if rol == "adjunto":
         print("1")
-    if rol := "temporario":
+    if rol == "temporario":
         print("3 y 1")
-    if rol := "tercerizado":
+    if rol == "tercerizado":
         print("1 y 5")
 
 

@@ -98,6 +98,7 @@ def actosDisponibles(rol):
 
 def seleccionActo(rol):
     actoElegido = int(input("elija su acto a realizar "))
+    acpetar = bool
     if rol == "superior":
         listaActos = [1, 3, 4]
     if rol == "adjunto":
@@ -108,7 +109,17 @@ def seleccionActo(rol):
         listaActos = [1, 5]
     if actoElegido in listaActos:
         print("acto realizado correctamente")
-        seleccionActo(rol)
+        otroActo = input("¿quiere realizar otro acto? ")
+        if otroActo == "si":
+            acpetar = True
+        if otroActo == "no":
+            print("cerrando sesion")
+            acpetar = False
+        if acpetar == True:
+            seleccionActo(rol)
+        else:
+            usuarioLogueado()
+
     else:
         print("el acto no existe o no lo tenes disponible")
         seleccionActo(rol)

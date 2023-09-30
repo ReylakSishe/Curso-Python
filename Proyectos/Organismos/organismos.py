@@ -109,6 +109,9 @@ def seleccionActo(rol):
     if actoElegido in listaActos:
         print("acto realizado correctamente")
         seleccionActo(rol)
+    else:
+        print("el acto no existe o no lo tenes disponible")
+        seleccionActo(rol)
 
 
 usuarioLogueado()

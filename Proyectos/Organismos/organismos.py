@@ -93,6 +93,22 @@ def actosDisponibles(rol):
         print("3 y 1")
     if rol == "tercerizado":
         print("1 y 5")
+    seleccionActo(rol)
+
+
+def seleccionActo(rol):
+    actoElegido = int(input("elija su acto a realizar "))
+    if rol == "superior":
+        listaActos = [1, 3, 4]
+    if rol == "adjunto":
+        listaActos = [1]
+    if rol == "temporario":
+        listaActos = [1, 3]
+    if rol == "tercerizado":
+        listaActos = [1, 5]
+    if actoElegido in listaActos:
+        print("acto realizado correctamente")
+        seleccionActo(rol)
 
 
 usuarioLogueado()

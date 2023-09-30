@@ -6,13 +6,13 @@ def calcular():
     resta = a - b
     multiplicacion = a * b
     division = a / b
-    if operacionElegida == "suma":
+    if operacionElegida == "s":
         print(suma)
-    if operacionElegida == "resta":
+    if operacionElegida == "r":
         print(resta)
-    if operacionElegida == "multiplicacion":
+    if operacionElegida == "m":
         print(multiplicacion)
-    if operacionElegida == "division":
+    if operacionElegida == "d":
         print(division)
     calcular()
 

@@ -14,6 +14,13 @@ roles_contraseñas = {
     "tercerizado": "ECHENME",
 }
 
+roles_actos = {
+    "superior": [1, 3, 4],
+    "adjunto": [1],
+    "temporario": [3, 1],
+    "tercerizado": [1, 5],
+}
+
 # intentos
 
 
@@ -65,6 +72,7 @@ def contraseñaPuesta(rol):
         if contraseñaIngresada in roles_contraseñas[rol]:
             print("contraseña correcta")
             print("bienvenido de vuelta")
+            actosDisponibles(rol)
             break
 
         else:
@@ -73,6 +81,18 @@ def contraseñaPuesta(rol):
             continue
     if intento == 3:
         terminar()
+
+
+def actosDisponibles(rol):
+    print("usted tiene disponibles los siguientes tipos de actos:")
+    if rol := "superior":
+        print("1, 3 y 4")
+    if rol := "adjunto":
+        print("1")
+    if rol := "temporario":
+        print("3 y 1")
+    if rol := "tercerizado":
+        print("1 y 5")
 
 
 usuarioLogueado()

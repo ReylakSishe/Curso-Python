@@ -5,7 +5,7 @@ def form1():
     nombre = str(input("Nombre: "))
     apellido = str(input("Apelllido: "))
     direccion = str(input("Direccion: "))
-    fechaDeActo = int(input("Fecha de acto (AÑO-MES-DIA): "))
+    fechaDeActo = input("Fecha de acto (AÑO-MES-DIA): ")
     numeroDeOficina = int(input("Numero de oficina: "))
     logon = str(input("Logon: "))
     provincia = str(input("Provincia: "))

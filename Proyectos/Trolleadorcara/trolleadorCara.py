@@ -5,7 +5,8 @@ ventana = pyglet.window.Window(1366, 768, "Mi primer juego")
 lote = pyglet.graphics.Batch()
 
 jugador_sprite = pyglet.resource.image("Recursos/ImagenJugador.png")
-jugador = Jugador()
+jugador = pyglet.sprite.Sprite(jugador_sprite, x=200, y=100, batch=lote)
+control = Control()
 
 
 @ventana.event
@@ -35,8 +36,8 @@ class jugador:
 @ventana.event
 def on_key_press(symbol, modifiers):
     if symbol == pyglet.window.key.LEFT:
-        jugador.moverIzquierda()
+        control.moverIzquierda()
     elif symbol == pyglet.window.key.RIGHT:
-        jugador.moverDerecha()
+        control.moverDerecha()
     elif symbol == pyglet.window.key.UP:
-        jugador.salto()
+        control.salto()
